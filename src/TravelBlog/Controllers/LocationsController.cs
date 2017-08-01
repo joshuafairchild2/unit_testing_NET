@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using TravelBlog.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace TravelBlog.Controllers
 {
@@ -35,7 +36,7 @@ namespace TravelBlog.Controllers
         [HttpPost]
         public IActionResult Edit(Location location)
         {
-            db.Entry(location).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            db.Entry(location).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

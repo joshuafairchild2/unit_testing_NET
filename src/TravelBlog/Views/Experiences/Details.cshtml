@@ -1,0 +1,10 @@
+﻿@model TravelBlog.Models.Experience
+@{
+    ViewData["Title"] = "Experience Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<hr />
+@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)
+<p>@Html.ActionLink("Back to list view", "Index")</p>
