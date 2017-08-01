@@ -10,8 +10,16 @@
 <h4>Add a new Experience</h4>
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Description)
-    @Html.TextBoxFor(model => model.Description)
+    <p>
+        @Html.LabelFor(model => model.Description)
+        @Html.TextBoxFor(model => model.Description)
+    </p>
+
+    <p>
+        @Html.Label("Location")
+        @Html.DropDownList("LocationId")
+    </p>
+
     <input type="submit" value="Add a new experience" />
 }
 <p>@Html.ActionLink("Back to list view", "Index")</p>

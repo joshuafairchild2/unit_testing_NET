@@ -13,8 +13,16 @@
 {
     @Html.HiddenFor(model => model.ExperienceId)
     @Html.HiddenFor(model => model.LocationId)
-    @Html.LabelFor(model => model.Description)
-    @Html.EditorFor(model => model.Description)
+
+    <p>
+        @Html.LabelFor(model => model.Description)
+        @Html.EditorFor(model => model.Description)
+    </p>
+
+    <p>
+        @Html.Label("Location")
+        @Html.DropDownList("LocationId")
+    </p>
 
     <input type="submit" value="Save" />
 }
