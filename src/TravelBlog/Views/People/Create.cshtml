@@ -1,0 +1,25 @@
+﻿@model TravelBlog.Models.Person
+@{
+    ViewData["Title"] = "Create People";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Create People</h2>
+<hr />
+<h4>Add a new People</h4>
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+    </p>
+    
+    <p>
+        @Html.Label("Experience")
+        @Html.DropDownList("ExperienceId")
+    </p>
+
+    <input type="submit" value="Add a new people" />
+}
+<p>@Html.ActionLink("Back to list view", "Index")</p>
