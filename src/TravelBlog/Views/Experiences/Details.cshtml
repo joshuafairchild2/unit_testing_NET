@@ -7,4 +7,12 @@
 <h2>Details</h2>
 <hr />
 @Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)
+<h3>People</h3>
+<ul>
+    @foreach(var person in Model.People)
+    {
+        <li>@person.Name</li>
+
+    }
+</ul>
 <p>@Html.ActionLink("Back to list view", "Index")</p>

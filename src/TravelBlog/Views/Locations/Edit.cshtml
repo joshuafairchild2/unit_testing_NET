@@ -1,22 +1,20 @@
 ﻿@model TravelBlog.Models.Location
 
-<html>
-<head>
-    <title>Travel Blog - Edit</title>
-</head>
-<body>
-    <h2>Edit</h2>
-    <hr />
-    <h4>Edit this Location: @Html.DisplayFor(model => model.Name)</h4>
+@{
+    ViewData["Title"] = "Create Experience";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
-    @using (Html.BeginForm())
-    {
-        @Html.HiddenFor(model => model.LocationId)
-        @Html.LabelFor(model => model.Name)
-        @Html.EditorFor(model => model.Name)
+<h2>Edit</h2>
+<hr />
+<h4>Edit this Location: @Html.DisplayFor(model => model.Name)</h4>
 
-        <input type="submit" value="Save" />
-    }
-    <p>@Html.ActionLink("Back to list view", "Index")</p>
-</body>
-</html>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.LocationId)
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    <input type="submit" value="Save" />
+}
+<p>@Html.ActionLink("Back to list view", "Index")</p>
