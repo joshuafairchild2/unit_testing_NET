@@ -1,18 +1,50 @@
 ﻿body {
-    background-color: palegreen;
+    background-color:  #B86F52;
+    font-family: 'Rock Salt', cursive;
+}
+
+.navbar {
+    background: #634133;
+    border: none;
+    border-bottom: 1px solid #231C07;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    color: #fff !important;
 }
 
 .boxes {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+    padding-left: 30px;
 }
 .box {
-    background-color: darkseagreen;
-    flex: 0 0 500px;
+    background-color: lightsalmon;
+    flex: 0 0 250px;
     margin: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #231C07;
+    border-radius: 5px;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-    color: blue;
+    color: #634133;
+    height: auto;
+    font-size: 20px;
+    text-align:center;
+}
+.imgTemplate{
+    height: 250px;
+    background: url("../img/genericTourist.jpg") no-repeat;
+    border-radius: 5px 5px 0 0;
+}
+.linksInBox a{
+    color: #231C07;
+    font-size: 17px;
+}
+
+.addIcon{
+    display: block;
     height: 100px;
+    width: 105px;
+    margin: auto;
 }

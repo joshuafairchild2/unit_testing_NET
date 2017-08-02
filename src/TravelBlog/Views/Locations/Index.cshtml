@@ -13,12 +13,17 @@
 @foreach(var listLocation in Model)
 {
     <div class="box">
-        @Html.DisplayFor(modelLocation => listLocation.Name) | 
-        @Html.ActionLink("Details", "Details", new { id = listLocation.LocationId }) | 
-        @Html.ActionLink("Edit", "Edit", new { id = listLocation.LocationId }) | 
-        @Html.ActionLink("Delete", "Delete", new { id = listLocation.LocationId })
+        <div class="imgTemplate"></div>
+        @Html.DisplayFor(modelLocation => listLocation.Name) 
+        <div class="linksInBox">
+            @Html.ActionLink("Details", "Details", new { id = listLocation.LocationId }) |
+            @Html.ActionLink("Edit", "Edit", new { id = listLocation.LocationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = listLocation.LocationId })
+        </div>
     </div>
 }
 </main>
 
-<p>@Html.ActionLink("Add new location", "Create")</p>
+<a class="addIcon" href='@Url.Action("Create")'>
+    <img src='@Url.Content("~/img/add_new.png")' />
+</a>
