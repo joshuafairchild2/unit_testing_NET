@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using TravelBlog.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Diagnostics;
 
 namespace TravelBlog.Controllers
 {
@@ -10,16 +12,17 @@ namespace TravelBlog.Controllers
         private TravelBlogContext db = new TravelBlogContext();
         public IActionResult Index()
         {
-            return View(db.Locations.ToList());
+            return View(db.Locations.OrderBy(location => location.Name).ToList());
         }
         public IActionResult Details(int id)
         {
-            var thisLocation = db.Locations.Include(locations => locations.Experiences).ThenInclude(experiences => experiences.People).FirstOrDefault(location => location.LocationId == id);
+            var thisLocation = db.Locations.Include(location => location.Experiences).ThenInclude(experiences => experiences.People).FirstOrDefault(location => location.LocationId == id);
             //var thisExperience = from p in db.People
             //                    join e in db.Experiences on p.ExperienceId equals e.ExperienceId
             //                    join l in db.Locations on e.LocationId equals l.LocationId
             //                    where l.LocationId == id
             //                    select new { p };
+            Debug.WriteLine(thisLocation);
             return View(thisLocation);
         }
         public IActionResult Create()

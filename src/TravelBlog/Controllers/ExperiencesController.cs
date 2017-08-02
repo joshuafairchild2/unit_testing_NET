@@ -11,7 +11,7 @@ namespace TravelBlog.Controllers
         private TravelBlogContext db = new TravelBlogContext();
         public IActionResult Index()
         {
-            return View(db.Experiences.Include(experiences => experiences.Location).ToList());
+            return View(db.Experiences.Include(experiences => experiences.Location).OrderBy(experiences => experiences.Description).ToList());
         }
 
         public IActionResult Details(int id)

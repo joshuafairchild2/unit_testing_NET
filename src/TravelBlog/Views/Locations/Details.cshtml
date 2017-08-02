@@ -13,7 +13,11 @@
     <ul>
         @foreach (var experience in Model.Experiences)
         {
-            <li>@Html.DisplayFor(experiences => experience.Description) <br />
+            <li>@Html.ActionLink(experience.Description,  "Details", "Experiences", new { id = experience.ExperienceId }, null) <br />
+                @if (experience.People.Count > 0)
+                {
+
+
                 <p>People I Met:</p>
             <ul>
                 
@@ -24,6 +28,7 @@
 
                     }
             </ul>
+                }
             </li>
              
         }

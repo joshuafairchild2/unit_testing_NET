@@ -1,3 +1,18 @@
 ﻿body {
-    background-color: mistyrose;
+    background-color: palegreen;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.box {
+    background-color: darkseagreen;
+    flex: 0 0 500px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    color: blue;
+    height: 100px;
 }
