@@ -14,7 +14,12 @@ namespace TravelBlog.Controllers
         }
         public IActionResult Details(int id)
         {
-            var thisLocation = db.Locations.Include(locations => locations.Experiences).FirstOrDefault(locations => locations.LocationId == id);
+            var thisLocation = db.Locations.Include(locations => locations.Experiences).ThenInclude(experiences => experiences.People).FirstOrDefault(location => location.LocationId == id);
+            //var thisExperience = from p in db.People
+            //                    join e in db.Experiences on p.ExperienceId equals e.ExperienceId
+            //                    join l in db.Locations on e.LocationId equals l.LocationId
+            //                    where l.LocationId == id
+            //                    select new { p };
             return View(thisLocation);
         }
         public IActionResult Create()

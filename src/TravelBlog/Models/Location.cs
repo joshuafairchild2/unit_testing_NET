@@ -9,7 +9,9 @@ namespace TravelBlog.Models
     {
         public Location()
         {
-            this.Experiences = new HashSet<Experience>();
+            //this.Experiences = new HashSet<Experience>();
+            //this.People = new HashSet<Person>();
+
         }
 
         [Key]

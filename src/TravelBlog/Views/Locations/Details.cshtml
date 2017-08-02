@@ -1,19 +1,31 @@
 ﻿@model TravelBlog.Models.Location
 
-@{
-    ViewData["Title"] = "Create Experience";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<h2>Details</h2>
-<hr />
-@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
-
-<h3>Experiences:</h3>
-<ul>
-    @foreach(var experience in Model.Experiences)
-    {
-    <li>@experience.Description</li>
+    @{
+        ViewData["Title"] = "Create Experience";
+        Layout = "~/Views/Shared/_Layout.cshtml";
     }
-</ul>
+
+    <h2>Details</h2>
+    <hr />
+    @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+
+    <h3>Experiences:</h3>
+    <ul>
+        @foreach (var experience in Model.Experiences)
+        {
+            <li>@Html.DisplayFor(experiences => experience.Description) <br />
+                <p>People I Met:</p>
+            <ul>
+                
+                    @foreach(var person in experience.People)
+                    {
+
+                        <li>@Html.DisplayFor(people => person.Name)</li>
+
+                    }
+            </ul>
+            </li>
+             
+        }
+    </ul>
 <p>@Html.ActionLink("Back to list view", "Index")</p>
