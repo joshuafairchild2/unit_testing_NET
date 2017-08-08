@@ -194,5 +194,6 @@
 --reference:C:\Users\epicodus\.nuget\packages\xunit.runner.reporters\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.reporters.dotnet.dll
 --reference:C:\Users\epicodus\.nuget\packages\xunit.runner.utility\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.utility.dotnet.dll
 --reference:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\TravelBlogDay2\src\TravelBlog\bin\Debug\netcoreapp1.0\TravelBlog.dll
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\TravelBlogDay2\TravelBlog.Tests\PersonTest.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\TravelBlogDay2\TravelBlog.Tests\ModelTests\PersonControllerTest.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\TravelBlogDay2\TravelBlog.Tests\ModelTests\PersonTest.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\TravelBlogDay2\TravelBlog.Tests\Properties\AssemblyInfo.cs
