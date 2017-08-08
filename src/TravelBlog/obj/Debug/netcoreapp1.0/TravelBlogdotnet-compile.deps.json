@@ -28,6 +28,7 @@
           "Microsoft.Extensions.Configuration.Xml": "1.0.0",
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Microsoft.NETCore.App": "1.0.0",
+          "System.ComponentModel.Annotations": "4.1.0",
           "System.Interactive.Async": "3.0.0",
           "System.Linq": "4.1.0",
           "System.Linq.Parallel": "4.0.1"
@@ -2738,6 +2739,7 @@
           "Microsoft.Extensions.Configuration.Xml": "1.0.0",
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Microsoft.NETCore.App": "1.0.0",
+          "System.ComponentModel.Annotations": "4.1.0",
           "System.Interactive.Async": "3.0.0",
           "System.Linq": "4.1.0",
           "System.Linq.Parallel": "4.0.1"
